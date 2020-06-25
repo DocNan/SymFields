@@ -1,8 +1,7 @@
 # benchmark SymFields module
-import sys
-sys.path.append('../../python3/')
 import sympy
-from function_lib.SymFields import *
+from SymFields import *
+
 pi = sympy.pi
 
 # cylinder coordinates
