@@ -2,7 +2,7 @@
 Symbolic vector Fields analysis tool in python.
 Detailed introduction can be seen in this ArXiv paper: https://arxiv.org/abs/2012.10723 
 
-Corrections to the introduction manuscipt on ArXiv:
+Corrections to the introduction manuscript on ArXiv:
 
 (1) In abstract and introduction sections, sympy module does have some simple vector field analysis function under Cartesian coordinates, but it could not be extened to the more general curvilinear coordinates. SymFields could be a very good compliment to sympy in the fields of vector fields analysis.
 
