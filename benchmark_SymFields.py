@@ -32,7 +32,7 @@ L = Div(grad, X, coordinate='Cylinder', evaluation=1)
 
 # test metric tensor of toroidal coordinate
 r, theta, zeta, R0 = sympy.symbols('r, theta, zeta, R0')
-co_M = Metric(coordinate='Toroidal')
+# co_M = Metric(coordinate='Toroidal')
 
 
 # test non-orthogonal shifted cylinder coordinate
