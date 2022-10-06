@@ -27,5 +27,6 @@ Using optinal input (normal=0), the normalization of the units and physical valu
 
 ## Publication:
 And the ArXiv preprint manuscript is formally published on the Future Technology Conference (FTC) in Springer FTC collcection [https://link.springer.com/chapter/10.1007/978-3-030-89906-6_45]. The previous errors in ArXiv preprint are corrected in this finally publication. And it can be formally cited as: 
+
 [Chu, N. (2022). SymFields: An Open Source Symbolic Fields Analysis Tool for General Curvilinear Coordinates in Python. In: Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2021, Volume 1. FTC 2021. Lecture Notes in Networks and Systems, vol 358. Springer, Cham. https://doi.org/10.1007/978-3-030-89906-6_45]
 
