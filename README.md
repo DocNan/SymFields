@@ -33,7 +33,7 @@ And the ArXiv preprint manuscript is formally published on the Future Technology
 
 # Release
 The orignal version 1 of SymFields are saved in the formal release of publish 1.
-The version 2 of SymFields are will be saved as release 2.
+The version 2 of SymFields will be saved as release 2.
 
 
 
