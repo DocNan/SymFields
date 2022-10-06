@@ -11,3 +11,19 @@ Corrections to the introduction manuscript on ArXiv:
 $$\nabla\cdot\vec{A} = \frac{1}{r}\frac{\partial}{\partial r}(r A_r) + \frac{\partial A_{\phi}}{\partial \phi} + \frac{\partial A_z}{\partial z}$$
 
 Which is also an example of wrong experssion of divergence.  
+
+# updates to Symfields
+In version 2, addition features are added to SymFields, the includes:
+## Additional functions
+Plus()         # plus two vectors
+Minus()        # minus two vectors
+Multi_Scalar() # multiply vector with scalar
+
+## wave vector format of outputs
+Using optional input (wavevector = 1), the nabla operator will be converted to wave vector format as $i\vec{k}$.
+
+## un-normalized units outputs
+Using optinal input (normal=0), the normalization of the units and physical values will be skipped in the calculation. This is useful to make some theoretical comparison. But to get real meaningful physical outputs, the default normalized output (normal=1) should be used.
+
+And the ArXiv preprint manuscript is formally published on the Future Technology Conference (FTC) in Springer FTC collcection [https://link.springer.com/chapter/10.1007/978-3-030-89906-6_45]. And it can be formally cited as: [Chu, N. (2022). SymFields: An Open Source Symbolic Fields Analysis Tool for General Curvilinear Coordinates in Python. In: Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2021, Volume 1. FTC 2021. Lecture Notes in Networks and Systems, vol 358. Springer, Cham. https://doi.org/10.1007/978-3-030-89906-6_45]
+
