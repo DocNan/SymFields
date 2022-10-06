@@ -68,3 +68,49 @@ div_curl2 = Div(curl2, Xi, coordinate='shifted cylinder', metric=M_contra, evalu
 sympy.simplify(div_curl2)
 
 
+# ----------------------------------------------------------------------------------------
+# benchmark for SymFields version 2:
+r, phi, z = sympy.symbols('r, phi, z')
+Xi = [r, phi, z]
+U = sympy.Function('U')
+U = U(r, phi, z)
+A_r = sympy.Function('A_r')(r, phi, z)
+A_phi = sympy.Function('A_phi')(r, phi, z)
+A_z = sympy.Function('A_z')(r, phi, z)
+A = [A_r, A_phi, A_z]
+
+x = r*sympy.cos(phi)
+y = r*sympy.sin(phi)
+z = z
+R = [x, y, z]
+
+contra = 1
+Me = Metric(Xi=Xi, R=R, coordinate='Cylinder', contra=contra)
+J = Jacobian(Me, contra=contra)
+
+# check wave vector outputs of SymFields
+grad_U_k = Grad(U, Xi=Xi, coordinate='wave_vector', metric=Me, wavevector=1)
+div_grad_U_k = Div(grad_U_k, Xi=Xi, coordinate='wave_vector', metric=Me, wavevector=1)
+curl_grad_U_k = Curl(grad_U_k, Xi=Xi,  coordinate='wave_vector', metric=Me, wavevector=1)
+div_A_k = Div(A, Xi=Xi, coordinate='wave_vector', metric=Me, wavevector=1)
+curl_A_k = Curl(A, Xi=Xi,  coordinate='wave_vector', metric=Me, wavevector=1)
+div_curl_A_k = Div(curl_A_k, Xi=Xi, coordinate='wave_vector', metric=Me, wavevector=1)
+
+
+# standard normalized output of SymFields
+grad_U = Grad(U, Xi=Xi, coordinate='normalized', metric=Me, normal=1)
+div_grad_U = Div(grad_U, Xi=Xi, coordinate='normalized', metric=Me, normal=1)
+curl_grad_U = Curl(grad_U, Xi=Xi,  coordinate='normalized', metric=Me, normal=1)
+div_A = Div(A, Xi=Xi, coordinate='normalized', metric=Me, normal=1)
+curl_A = Curl(A, Xi=Xi,  coordinate='normalized', metric=Me, normal=1)
+div_curl_A = Div(curl_A, Xi=Xi, coordinate='normalized', metric=Me, normal=1)
+
+
+# check the derivation without normalization
+grad_U_no = Grad(U, Xi=Xi, coordinate='non-normal', metric=Me, normal=0)
+div_grad_U_no = Div(grad_U_no, Xi=Xi, coordinate='non-normal', metric=Me, normal=0)
+curl_grad_U_no = Curl(grad_U_no, Xi=Xi,  coordinate='non-normal', metric=Me, normal=0)
+div_A_no = Div(A, Xi=Xi, coordinate='non-normal', metric=Me, normal=0)
+curl_A_no = Curl(A, Xi=Xi,  coordinate='non-normal', metric=Me, normal=0)
+div_curl_A_no = Div(curl_A_no, Xi=Xi, coordinate='non-normal', metric=Me, normal=0)
+
