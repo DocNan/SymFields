@@ -30,3 +30,10 @@ And the ArXiv preprint manuscript is formally published on the Future Technology
 
 [Chu, N. (2022). SymFields: An Open Source Symbolic Fields Analysis Tool for General Curvilinear Coordinates in Python. In: Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2021, Volume 1. FTC 2021. Lecture Notes in Networks and Systems, vol 358. Springer, Cham. https://doi.org/10.1007/978-3-030-89906-6_45]
 
+
+# Release
+The orignal version 1 of SymFields are saved in the formal release of publish 1.
+The version 2 of SymFields are will be saved as release 2.
+
+
+
